@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Portfolio</title>
+    <title>Your Name - Full-Stack Developer Portfolio</title>
     <style>
         /* Reset and base styles */
         * {
@@ -93,9 +93,41 @@
             font-size: 1.1rem;
         }
         
+        /* Skills */
+        #skills {
+            background: #f4f4f4;
+        }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+            text-align: center;
+        }
+        .skill-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease;
+        }
+        .skill-item.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .skill-item h3 {
+            color: #3498db;
+            margin-bottom: 0.5rem;
+        }
+        .skill-item p {
+            font-size: 0.9rem;
+        }
+        
         /* Projects */
         #projects {
-            background: #f4f4f4;
+            background: white;
         }
         .projects-grid {
             display: grid;
@@ -104,7 +136,7 @@
             margin-top: 2rem;
         }
         .project-card {
-            background: white;
+            background: #f4f4f4;
             padding: 1.5rem;
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
@@ -128,7 +160,7 @@
         
         /* Contact */
         #contact {
-            background: white;
+            background: #f4f4f4;
         }
         #contact form {
             max-width: 600px;
@@ -186,6 +218,7 @@
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -196,7 +229,7 @@
     <section id="home">
         <div class="container">
             <h1>Welcome to My Portfolio</h1>
-            <p>I'm a passionate developer creating amazing things. Let's build something together!</p>
+            <p>Full-stack developer skilled in JavaScript, Python, Rust, and more. Building innovative solutions with modern tech.</p>
         </div>
     </section>
 
@@ -205,9 +238,44 @@
         <div class="container">
             <h2>About Me</h2>
             <p>
-                Hi, I'm [Your Name], a full-stack developer with experience in web technologies like HTML, CSS, JavaScript, and more. 
-                I love turning ideas into reality and solving complex problems. When I'm not coding, I enjoy [your hobbies, e.g., hiking and reading tech blogs].
+                Hi, I'm [Your Name], a versatile developer with expertise across frontend, backend, and data science. 
+                I work with technologies like React for dynamic UIs, Node.js for scalable servers, Python for data analysis via Jupyter, 
+                and even Rust for high-performance tools. Passionate about clean code and open-source contributions. 
+                When not coding, I explore new languages like Ruby for web apps.
             </p>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <h2>My Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <h3>JavaScript & React</h3>
+                    <p>Building interactive UIs and SPAs with modern JS frameworks.</p>
+                </div>
+                <div class="skill-item">
+                    <h3>HTML & CSS</h3>
+                    <p>Structuring and styling responsive web pages from scratch.</p>
+                </div>
+                <div class="skill-item">
+                    <h3>Node.js</h3>
+                    <p>Server-side development with Express and APIs.</p>
+                </div>
+                <div class="skill-item">
+                    <h3>Python & Jupyter Notebook</h3>
+                    <p>Data analysis, ML models, and interactive notebooks for insights.</p>
+                </div>
+                <div class="skill-item">
+                    <h3>Rust</h3>
+                    <p>Systems programming for safe, fast applications and tools.</p>
+                </div>
+                <div class="skill-item">
+                    <h3>Ruby</h3>
+                    <p>Web development with Rails for rapid prototyping.</p>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -217,19 +285,24 @@
             <h2>My Projects</h2>
             <div class="projects-grid">
                 <div class="project-card">
-                    <h3>Project 1: Awesome App</h3>
-                    <p>A web app built with React and Node.js. It helps users manage tasks efficiently.</p>
-                    <a href="https://github.com/yourusername/project1" target="_blank">View on GitHub</a>
+                    <h3>Task Manager App</h3>
+                    <p>A full-stack app using React for the frontend, Node.js/Express for the backend, and JavaScript for real-time updates. Deployed on Vercel.</p>
+                    <a href="https://github.com/yourusername/task-manager" target="_blank">View on GitHub</a>
                 </div>
                 <div class="project-card">
-                    <h3>Project 2: Data Dashboard</h3>
-                    <p>An interactive dashboard using D3.js for visualizing sales data.</p>
-                    <a href="https://github.com/yourusername/project2" target="_blank">View on GitHub</a>
+                    <h3>Data Insights Dashboard</h3>
+                    <p>Interactive data visualization built with Python and Jupyter Notebook. Analyzes sales data and exports to HTML/CSS reports.</p>
+                    <a href="https://nbviewer.jupyter.org/github/yourusername/data-dashboard/blob/main/analysis.ipynb" target="_blank">View Notebook</a>
                 </div>
                 <div class="project-card">
-                    <h3>Project 3: Blog Site</h3>
-                    <p>A static blog generated with Jekyll, hosted on GitHub Pages.</p>
-                    <a href="https://github.com/yourusername/project3" target="_blank">View on GitHub</a>
+                    <h3>Performance CLI Tool</h3>
+                    <p>A command-line tool in Rust for file processing, integrated with a Ruby on Rails API for backend storage. Focuses on speed and safety.</p>
+                    <a href="https://github.com/yourusername/rust-cli-tool" target="_blank">View on GitHub</a>
+                </div>
+                <div class="project-card">
+                    <h3>Blog Platform</h3>
+                    <p>A simple blog using HTML/CSS for static pages, JavaScript for interactivity, and Ruby for dynamic content generation.</p>
+                    <a href="https://github.com/yourusername/blog-platform" target="_blank">View on GitHub</a>
                 </div>
             </div>
         </div>
@@ -239,25 +312,25 @@
     <section id="contact">
         <div class="container">
             <h2>Get in Touch</h2>
-            <form action="#" method="POST"> <!-- Replace with your form handler, e.g., Formspree or Netlify -->
+            <form action="#" method="POST"> <!-- Integrate with Formspree, Netlify, or Node.js backend for handling -->
                 <input type="text" placeholder="Your Name" required>
                 <input type="email" placeholder="Your Email" required>
-                <textarea rows="5" placeholder="Your Message" required></textarea>
+                <textarea rows="5" placeholder="Tell me about your project (e.g., React app or Python analysis!)" required></textarea>
                 <button type="submit">Send Message</button>
             </form>
-            <p style="text-align: center; margin-top: 1rem;">Or email me at: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+            <p style="text-align: center; margin-top: 1rem;">Or email me at: <a href="mailto:your.email@example.com">your.email@example.com</a> | LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank">yourprofile</a></p>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2023 [Your Name]. All rights reserved. | Built with HTML & CSS</p>
+            <p>&copy; 2023 [Your Name]. Built with HTML, CSS, and JavaScript. Showcasing Python, Rust, Ruby, React, Node.js & Jupyter.</p>
         </div>
     </footer>
 
     <script>
-        // Simple smooth scrolling for navigation links
+        // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -265,6 +338,24 @@
                     behavior: 'smooth'
                 });
             });
+        });
+
+        // Simple fade-in animation for skills on scroll (using vanilla JavaScript)
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.skill-item').forEach(item => {
+            observer.observe(item);
         });
     </script>
 </body>
